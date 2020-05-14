@@ -17,9 +17,6 @@ resource "aws_security_group" "efs_sg" {
 
   tags = merge(
     {
-      "Environment" = format("%s", var.environment)
-    },
-    {
       "Name" = format("%s", var.name)
     },
     var.tags,
@@ -32,9 +29,6 @@ resource "aws_efs_file_system" "efs" {
   creation_token   = var.creation_token
 
   tags = merge(
-    {
-      "Environment" = format("%s", var.environment)
-    },
     {
       "Name" = format("%s", var.name)
     },
