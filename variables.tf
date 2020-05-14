@@ -1,8 +1,3 @@
-variable "environment" {
-  description = "Name of the environment; will be prefixed to all resources"
-  type        = string
-}
-
 variable "name" {
   description = "Name of the resource."
   type        = string
